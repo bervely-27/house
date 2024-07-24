@@ -1,0 +1,28 @@
+<div class="whole">
+  @for(house of houses;track house.id){
+  <div class="house">
+    <div class="container-image">
+      <img [src]="house.image" alt="house" />
+    </div>
+    <i
+      id="badge"
+      [ngStyle]="{ color: house.isAvailable ? 'green' : 'red' }"
+      class="fa-solid fa-font-awesome"
+    ></i>
+
+    <div class="text">
+      <h4>{{ house.title }}</h4>
+
+      <!-- <div *ngIf="!house.badge"><i class="fa-regular fa-circle-dot" style="color: red;" ></i></div> -->
+      <div class="icon">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>{{ house.city }}</p>
+      </div>
+      <div class="more">
+        <p>Learn more</p>
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+    </div>
+  </div>
+  }
+</div>
