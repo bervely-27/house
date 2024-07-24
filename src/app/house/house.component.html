@@ -6,7 +6,7 @@
     </div>
     <i
       id="badge"
-      [ngStyle]="{ color: house.isAvailable ? 'green' : 'red' }"
+      [ngClass]="house.isAvailable?  'green':'red'"
       class="fa-solid fa-font-awesome"
     ></i>
 
